@@ -1,0 +1,27 @@
+//Sum of Array elements
+#include<stdio.h>
+# define SIZE 10
+int Add(int a[]);
+int main()
+{
+	int a[SIZE];
+	srand(time(NULL));
+	for (int i = 0; i < SIZE; i++)
+	{
+		a[i] = 1 + rand() % 6;
+		printf("%3d", a[i]);
+	}
+	printf("\nSum is: ");
+	printf("%d", Add(a));
+	puts("");
+	system("pause");
+}
+int Add(int a[])
+{
+	int total = 0;
+	for (int i = 0; i < SIZE; i++)
+	{
+	    total += a[i];
+	}
+	return total;
+}
